@@ -1,0 +1,7 @@
+{
+  "name": "avis-sondage",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

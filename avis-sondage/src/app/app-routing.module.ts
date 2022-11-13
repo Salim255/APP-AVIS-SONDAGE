@@ -3,24 +3,49 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
-    path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then( m => m.AuthPageModule)
+    path: 'home',
+    loadChildren: () =>
+      import('./home/home.module').then((m) => m.HomePageModule),
   },
+  /*   {
+    path: '',
+    redirectTo: 'sondages',
+    pathMatch: 'full',
+  }, */
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./auth/auth.module').then((m) => m.AuthPageModule),
+  },
+  {
+    path: 'avis',
+    loadChildren: () =>
+      import('./home/avis/avis.module').then((m) => m.AvisPageModule),
+  },
+
+  {
+    path: 'sondages',
+    loadChildren: () =>
+      import('./home/sondages/sondages.module').then(
+        (m) => m.SondagesPageModule
+      ),
+  },
+  /*   {
+    path: '',
+    redirectTo: '/home/tabs/sondage',
+    pathMatch: 'full',
+  }, */
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -6,11 +6,26 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage,
-  }
+    children: [
+      {
+        path: 'sondages',
+        loadChildren: () =>
+          import('./sondages/sondages.module').then(
+            (m) => m.SondagesPageModule
+          ),
+      },
+
+      {
+        path: 'avis',
+        loadChildren: () =>
+          import('./avis/avis.module').then((m) => m.AvisPageModule),
+      },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class HomePageRoutingModule {}

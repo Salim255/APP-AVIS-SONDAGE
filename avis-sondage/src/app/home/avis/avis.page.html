@@ -14,71 +14,58 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="survey" scroll="false">
-  <p>UI Du planning</p>
-  <div class="survey__context">
-    <h4 class="survey__context--label">Le ontext</h4>
-    <p class="survey__context--text">
-      Nous cherchons à rendre le visuel du planning plus agréable, nous
-      voudrions votre avis pour choisir entre c’est 2 boutons pour confirmer une
-      action : Lequels des 2 boutons préferez vous ?
-    </p>
-  </div>
-  <div class="survey__timing">
-    <p>
-      Il vous reste : 21 jours 3 heures et 25 minutes pour nous partager votre
-      avis !
-    </p>
-  </div>
+<ion-content>
   <!--  -->
 
-  <ion-grid class="survey__cards">
+  <ion-grid class="">
     <ion-row>
-      <ion-col size="12" size-ms="8" class="text-center">
-        <!--  -->
-
-        <ion-card>
-          <ion-card-header class="ion-no-padding">
-            <ion-card-title> </ion-card-title>
-          </ion-card-header>
-          <ion-img
-            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
-            class="img"
-          >
-          </ion-img>
-          <ion-card-content class="">
-            <p>
-              1 de participation au sondage de participation au sondage de
-              participation au sondage
-            </p>
-          </ion-card-content>
-        </ion-card>
+      <ion-col>
+        <p>Aimez vous utiliser l'application WellEat</p>
+        <ion-img
+          class=""
+          width="20"
+          height="20"
+          src="../../../assets/comme.svg"
+        ></ion-img>
+        <ion-img
+          class="icon__unlike"
+          src="../../../assets/ne-pas-aimer.svg"
+        ></ion-img>
       </ion-col>
-      <!--  -->
-
-      <!--  -->
-      <ion-col class="card">
-        <ion-card>
-          <ion-card-header class="ion-no-padding">
-            <ion-card-title> </ion-card-title>
-          </ion-card-header>
-
-          <ion-card-content class="card-content ion-no-padding">
-            <div class="ion-text-center">
-              <p>
-                de participation au sondage de participation au sondage de
-                participation au sondage
-              </p>
-            </div>
-            <ion-img
-              src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-              class="img"
-            >
-            </ion-img>
-          </ion-card-content>
-        </ion-card>
-        <div class="card__option">option1</div>
-        <!--  -->
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p>Soyez franc et donnez nous la note que vous attribuez à WellEat</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p>Que vous apporte au quotidien l’application Welleat ?</p>
+        <p>
+          Note pour expliquer ce que vous apporte au quotidien l’application...
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p>Avez-vous une remarque à faire sur l’application Welleat ?</p>
+        <p>
+          Note pour expliquer ce qui vous plaît ou ne vous plaît pas dans
+          l’application...
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p>Avez-vous une idée qui pourrez faciliter votre quotidien ?</p>
+        <p>Note pour expliquer votre idée...</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p>
+          Je souhaite être appeler pour échanger sur mon avis __ __ __ __ __
+        </p>
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -88,5 +75,4 @@
   <ion-button class="survey__valid">Je valide mon vote</ion-button>
 
   <!--  -->
-  <div slot="fixed"></div>
 </ion-content>

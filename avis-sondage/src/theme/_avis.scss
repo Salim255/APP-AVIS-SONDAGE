@@ -1,7 +1,66 @@
-.icon {
-  background: red;
+.like {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--ion-color-primary);
   &__like {
-    width: 4rem;
-    height: 2rem;
+    background: var(--ion-color-primary);
   }
+}
+.unlike {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.likeContainer {
+  display: flex;
+  justify-content: center;
+  &__like {
+    //margin: 1rem;
+    margin-right: 2rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__unlike {
+    margin-left: 2rem;
+    //margin: 1rem;
+  }
+}
+
+.icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  stroke-width: 0;
+  stroke: red;
+  //fill: currentColor;
+  //stroke: red;
+
+  fill: rgb(255, 255, 255);
+
+  margin: 2px;
+}
+
+.textInput {
+  min-height: 5rem;
+  background: rgb(255, 255, 255);
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+}
+
+body {
+  --ion-background-color: #eeeeee;
+  /*  font-family: "Inter";
+  font-style: normal; */
+  font-size: 0.9rem;
+  //line-height: 2.3rem;
+  color: rgba($color: #000000, $alpha: 0.6);
+}
+
+.tabFlext {
+  display: flex;
+  flex-direction: row;
+  //font-size: 0.2rem;
 }

@@ -11,11 +11,23 @@
       padding: 1rem;
     }
   }
+  &__header {
+    background: white;
+    margin: 2rem 1rem;
+    padding: 0.5rem 0.2rem;
+    border-radius: 0.4rem;
+    color: rgba($color: #000000, $alpha: 0.6);
+  }
 
   &__timing {
-    background: green;
-    padding: 1rem;
+    background: var(--ion-color-primary);
+    padding: 0.1rem 0.2rem;
     text-align: center;
+    color: white;
+    &--span {
+      font-weight: 400;
+      font-size: 1rem;
+    }
   }
   &__valide {
     margin-left: auto;
@@ -26,7 +38,7 @@
 
 .img {
   width: "100%";
-  height: 20rem;
+  height: 10rem;
   object-fit: fill;
   overflow: hidden;
   //border-radius: 0.2rem;
@@ -34,8 +46,8 @@
 }
 
 .card-content {
-  min-height: 10rem;
-  background-color: gray;
+  min-height: 7rem;
+  background-color: rgb(255, 255, 255);
   position: relative;
   &__text {
   }
@@ -45,12 +57,41 @@
   position: relative;
   &__option {
     position: absolute;
-    top: 97%;
+    top: 91%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: red;
+
     border-radius: 0.4rem;
     padding: 0.7rem 2rem;
+    text-transform: capitalize;
     // z-index: 100;
+    &--1 {
+      background: var(--ion-color-primary);
+    }
+    &--2 {
+      background: var(--ion-color-medium-tint);
+    }
   }
+}
+
+.btnValid {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  &__btn {
+    border-radius: 0.2rem;
+    //background: #ffc959;
+  }
+}
+
+.headerIcon {
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.headerTitle {
+  background-color: white;
+  //padding: 4rem 0;
+  //height: 5rem;
 }

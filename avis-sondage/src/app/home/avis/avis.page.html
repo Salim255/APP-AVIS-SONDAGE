@@ -1,10 +1,10 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title class="ion-no-padding">
+    <ion-title class="ion-no-padding headerTitle">
       <span class="ion-float-left ion-padding"> Avis</span>
       <ion-icon
         name="add-circle-outline"
-        class="ion-float-right ion-padding"
+        class="ion-float-right ion-padding headerIcon"
       ></ion-icon>
 
       <!--  <div class="ion-text-right">
@@ -20,28 +20,58 @@
   <ion-grid class="">
     <ion-row>
       <ion-col>
-        <p>Aimez vous utiliser l'application WellEat</p>
-        <ion-img
-          class=""
-          width="20"
-          height="20"
-          src="../../../assets/comme.svg"
-        ></ion-img>
-        <ion-img
-          class="icon__unlike"
-          src="../../../assets/ne-pas-aimer.svg"
-        ></ion-img>
+        <p>Aimez vous utiliser l'application WellEat ?</p>
+        <div class="likeContainer ion-text-center">
+          <ion-img
+            class="likeContainer__like like"
+            src="../../../assets/comme.svg"
+          ></ion-img>
+          <ion-img
+            class="likeContainer__unlike unlike"
+            src="../../../assets/ne-pas-aimer.svg"
+          ></ion-img>
+        </div>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
         <p>Soyez franc et donnez nous la note que vous attribuez à WellEat</p>
+        <div class="ion-text-center">
+          <!--  <ion-img src="../../../assets/star-o.svg" class="icon"></ion-img>
+          <ion-img src="../../../assets/star-o.svg" class="icon"></ion-img>
+          <ion-img src="../../../assets/star-o.svg" class="icon"></ion-img>
+          <ion-img src="../../../assets/star-o.svg" class="icon"></ion-img> -->
+          <ion-icon
+            slot="end"
+            fill="outline"
+            name="star"
+            class="icon"
+          ></ion-icon>
+          <ion-icon
+            slot="end"
+            fill="outline"
+            name="star"
+            class="icon"
+          ></ion-icon>
+          <ion-icon
+            slot="end"
+            fill="outline"
+            name="star"
+            class="icon"
+          ></ion-icon>
+          <ion-icon
+            slot="end"
+            fill="outline"
+            name="star"
+            class="icon"
+          ></ion-icon>
+        </div>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
         <p>Que vous apporte au quotidien l’application Welleat ?</p>
-        <p>
+        <p class="textInput">
           Note pour expliquer ce que vous apporte au quotidien l’application...
         </p>
       </ion-col>
@@ -49,7 +79,7 @@
     <ion-row>
       <ion-col>
         <p>Avez-vous une remarque à faire sur l’application Welleat ?</p>
-        <p>
+        <p class="textInput">
           Note pour expliquer ce qui vous plaît ou ne vous plaît pas dans
           l’application...
         </p>
@@ -58,21 +88,27 @@
     <ion-row>
       <ion-col>
         <p>Avez-vous une idée qui pourrez faciliter votre quotidien ?</p>
-        <p>Note pour expliquer votre idée...</p>
+        <p class="textInput">Note pour expliquer votre idée...</p>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <p>
-          Je souhaite être appeler pour échanger sur mon avis __ __ __ __ __
-        </p>
+        <ion-item no-lines class="ion-no-padding" lines="none">
+          <ion-checkbox slot="start"></ion-checkbox>
+          <ion-label
+            >Je souhaite être appeler pour échanger sur mon avis __ __ __ __ __
+          </ion-label>
+        </ion-item>
       </ion-col>
     </ion-row>
   </ion-grid>
 
   <!--  -->
-
-  <ion-button class="survey__valid">Je valide mon vote</ion-button>
+  <div class="btnValid">
+    <ion-button class="btnValid__btn" color="primary"
+      >Je valide mon avis</ion-button
+    >
+  </div>
 
   <!--  -->
 </ion-content>

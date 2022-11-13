@@ -1,10 +1,10 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title class="ion-no-padding">
+    <ion-title class="ion-no-padding headerTitle">
       <span class="ion-float-left ion-padding"> Sondages</span>
       <ion-icon
         name="add-circle-outline"
-        class="ion-float-right ion-padding"
+        class="ion-float-right ion-padding headerIcon"
       ></ion-icon>
 
       <!--  <div class="ion-text-right">
@@ -15,9 +15,9 @@
 </ion-header>
 
 <ion-content class="survey" scroll="false">
-  <p>UI Du planning</p>
+  <h3 class="ion-text-center survey__header">UI Du planning</h3>
   <div class="survey__context">
-    <h4 class="survey__context--label">Le ontext</h4>
+    <p class="survey__context--label">Le context</p>
     <p class="survey__context--text">
       Nous cherchons à rendre le visuel du planning plus agréable, nous
       voudrions votre avis pour choisir entre c’est 2 boutons pour confirmer une
@@ -26,58 +26,60 @@
   </div>
   <div class="survey__timing">
     <p>
-      Il vous reste : 21 jours 3 heures et 25 minutes pour nous partager votre
-      avis !
+      Il vous reste :
+      <span class="survey__timing--span">21 jours 3 heures et 25 minutes </span>
+      pour nous partager votre avis !
     </p>
   </div>
   <!--  -->
 
   <ion-grid class="survey__cards">
     <ion-row>
-      <ion-col size="12" size-ms="8" class="text-center">
-        <!--  -->
-
-        <ion-card>
-          <ion-card-header class="ion-no-padding">
-            <ion-card-title> </ion-card-title>
-          </ion-card-header>
-          <ion-img
-            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
-            class="img"
-          >
-          </ion-img>
-          <ion-card-content class="">
-            <p>
-              1 de participation au sondage de participation au sondage de
-              participation au sondage
-            </p>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <!--  -->
-
-      <!--  -->
       <ion-col class="card">
         <ion-card>
           <ion-card-header class="ion-no-padding">
             <ion-card-title> </ion-card-title>
+            <ion-img
+              src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+              class="img"
+            >
+            </ion-img>
           </ion-card-header>
 
           <ion-card-content class="card-content ion-no-padding">
-            <div class="ion-text-center">
-              <p>
-                de participation au sondage de participation au sondage de
-                participation au sondage
-              </p>
-            </div>
+            <p class="ion-text-center ion-padding">
+              de participation au sondage de participation au sondage de
+              participation au sondage
+            </p>
+          </ion-card-content>
+        </ion-card>
+        <div class="card__option card__option--1">option 1</div>
+        <!--  -->
+      </ion-col>
+      <!--  -->
+
+      <!--  -->
+    </ion-row>
+    <ion-row>
+      <ion-col class="card">
+        <ion-card>
+          <ion-card-header class="ion-no-padding">
+            <ion-card-title> </ion-card-title>
             <ion-img
               src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
               class="img"
             >
             </ion-img>
+          </ion-card-header>
+
+          <ion-card-content class="card-content ion-no-padding">
+            <p class="ion-text-center ion-padding">
+              de participation au sondage de participation au sondage de
+              participation au sondage
+            </p>
           </ion-card-content>
         </ion-card>
-        <div class="card__option">option1</div>
+        <div class="card__option card__option--2">option 2</div>
         <!--  -->
       </ion-col>
     </ion-row>
@@ -85,8 +87,10 @@
 
   <!--  -->
 
-  <ion-button class="survey__valid">Je valide mon vote</ion-button>
-
   <!--  -->
-  <div slot="fixed"></div>
+  <div class="btnValid">
+    <ion-button class="btnValid__btn" color="primary"
+      >Je valide mon vote</ion-button
+    >
+  </div>
 </ion-content>

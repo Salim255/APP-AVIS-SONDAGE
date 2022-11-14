@@ -1,14 +1,19 @@
 .survey {
   --ion-background-color: rgb(237, 234, 234);
+  &__input {
+    display: flex;
+    flex-direction: column;
+  }
   &__context {
     padding: 1rem;
+    margin-bottom: 2rem;
     &--label {
     }
     &--text {
-      min-height: 10rem;
+      min-height: 5rem;
       background: white;
       border-radius: 0.4rem;
-      padding: 1rem;
+      padding: 0.5rem;
     }
   }
   &__header {
@@ -24,6 +29,7 @@
     padding: 0.1rem 0.2rem;
     text-align: center;
     color: white;
+    margin-top: 2rem;
     &--span {
       font-weight: 400;
       font-size: 1rem;

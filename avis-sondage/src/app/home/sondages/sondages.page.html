@@ -14,16 +14,31 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="survey">
+<ion-content class="survey" padding>
   <h3 class="ion-text-center survey__header">UI Du planning</h3>
-  <div class="survey__context">
+
+  <div>
+    <ion-item lines="none">
+      <ion-label>Le context</ion-label>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-textarea
+        class="survey__context--text"
+        placeholder="Nous cherchons à rendre le visuel du planning plus agréable"
+      ></ion-textarea>
+    </ion-item>
+  </div>
+
+  <!--   <div class="survey__context">
     <p class="survey__context--label">Le context</p>
+
     <p class="survey__context--text">
       Nous cherchons à rendre le visuel du planning plus agréable, nous
       voudrions votre avis pour choisir entre c’est 2 boutons pour confirmer une
       action : Lequels des 2 boutons préferez vous ?
     </p>
-  </div>
+  </div> -->
   <div class="survey__timing">
     <p>
       Il vous reste :
@@ -87,7 +102,7 @@
 
   <!--  -->
   <div class="btnValid">
-    <ion-button class="btnValid__btn" color="primary"
+    <ion-button class="btnValid__btn" color="secondary" expand="block"
       >Je valide mon vote</ion-button
     >
   </div>

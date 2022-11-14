@@ -16,99 +16,212 @@
 
 <ion-content>
   <!--  -->
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <ion-grid class="">
+      <ion-row>
+        <ion-col>
+          <!--   <div>
+          <ion-item lines="none">
+            <ion-label
+              >Que vous apporte au quotidien l’application Welleat ?</ion-label
+            >
+          </ion-item>
 
-  <ion-grid class="">
-    <ion-row>
-      <ion-col>
-        <p>Aimez vous utiliser l'application WellEat ?</p>
-        <div class="likeContainer ion-text-center">
-          <ion-img
-            class="likeContainer__like like"
-            src="../../../assets/comme.svg"
-          ></ion-img>
-          <ion-img
-            class="likeContainer__unlike unlike"
-            src="../../../assets/ne-pas-aimer.svg"
-          ></ion-img>
-        </div>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <p>Soyez franc et donnez nous la note que vous attribuez à WellEat</p>
-        <div class="ion-text-center">
-          <!--  <ion-img src="../../../assets/star-o.svg" class="icon"></ion-img>
+          <ion-item lines="none" class="likeContainer ion-text-center">
+            <ion-img
+              class="likeContainer__like like"
+              src="../../../assets/comme.svg"
+            ></ion-img>
+            <ion-img
+              class="likeContainer__unlike unlike"
+              src="../../../assets/ne-pas-aimer.svg"
+            ></ion-img>
+          </ion-item>
+        </div> -->
+
+          <p>Aimez vous utiliser l'application WellEat ?</p>
+          <div class="likeContainer ion-text-center">
+            <ion-img
+              class="likeContainer__like like"
+              src="../../../assets/comme.svg"
+            ></ion-img>
+            <ion-img
+              class="likeContainer__unlike unlike"
+              src="../../../assets/ne-pas-aimer.svg"
+            ></ion-img>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <!-- <div>
+          <ion-item lines="none">
+            <ion-label
+              >Soyez franc et donnez nous la note que vous attribuez à
+              WellEat</ion-label
+            >
+          </ion-item>
+
+          <ion-item lines="none" class="ion-text-center">
+            <ion-icon
+              slot="end"
+              fill="outline"
+              name="star"
+              class="icon"
+            ></ion-icon>
+            <ion-icon
+              slot="end"
+              fill="outline"
+              name="star"
+              class="icon"
+            ></ion-icon>
+            <ion-icon
+              slot="end"
+              fill="outline"
+              name="star"
+              class="icon"
+            ></ion-icon>
+            <ion-icon
+              slot="end"
+              fill="outline"
+              name="star"
+              class="icon"
+            ></ion-icon>
+          </ion-item>
+        </div> -->
+
+          <p>Soyez franc et donnez nous la note que vous attribuez à WellEat</p>
+          <div class="ion-text-center">
+            <!--  <ion-img src="../../../assets/star-o.svg" class="icon"></ion-img>
           <ion-img src="../../../assets/star-o.svg" class="icon"></ion-img>
           <ion-img src="../../../assets/star-o.svg" class="icon"></ion-img>
           <ion-img src="../../../assets/star-o.svg" class="icon"></ion-img> -->
-          <ion-icon
-            slot="end"
-            fill="outline"
-            name="star"
-            class="icon"
-          ></ion-icon>
-          <ion-icon
-            slot="end"
-            fill="outline"
-            name="star"
-            class="icon"
-          ></ion-icon>
-          <ion-icon
-            slot="end"
-            fill="outline"
-            name="star"
-            class="icon"
-          ></ion-icon>
-          <ion-icon
-            slot="end"
-            fill="outline"
-            name="star"
-            class="icon"
-          ></ion-icon>
-        </div>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <p>Que vous apporte au quotidien l’application Welleat ?</p>
+            <ion-icon
+              slot="end"
+              fill="outline"
+              name="star"
+              class="icon"
+            ></ion-icon>
+            <ion-icon
+              slot="end"
+              fill="outline"
+              name="star"
+              class="icon"
+            ></ion-icon>
+            <ion-icon
+              slot="end"
+              fill="outline"
+              name="star"
+              class="icon"
+            ></ion-icon>
+            <ion-icon
+              slot="end"
+              fill="outline"
+              name="star"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div>
+            <ion-item lines="none">
+              <ion-label
+                >Que vous apporte au quotidien l’application Welleat
+                ?</ion-label
+              >
+            </ion-item>
+
+            <ion-item lines="none">
+              <ion-textarea
+                class="survey__context--text"
+                placeholder="Nous cherchons à rendre le visuel du planning plus agréable"
+                ngModel
+                name="suggestion"
+                required
+                type="text"
+              ></ion-textarea>
+            </ion-item>
+          </div>
+          <!--  <p>Que vous apporte au quotidien l’application Welleat ?</p>
         <p class="textInput">
           Note pour expliquer ce que vous apporte au quotidien l’application...
-        </p>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <p>Avez-vous une remarque à faire sur l’application Welleat ?</p>
+        </p> -->
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div>
+            <ion-item lines="none">
+              <ion-label
+                >Avez-vous une remarque à faire sur l’application Welleat
+                ?</ion-label
+              >
+            </ion-item>
+
+            <ion-item lines="none">
+              <ion-textarea
+                class="survey__context--text"
+                placeholder="Nous cherchons à rendre le visuel du planning plus agréable"
+                ngModel
+                name="obervation"
+                required
+                type="text"
+              ></ion-textarea>
+            </ion-item>
+          </div>
+          <!--  <p>Avez-vous une remarque à faire sur l’application Welleat ?</p>
         <p class="textInput">
           Note pour expliquer ce qui vous plaît ou ne vous plaît pas dans
           l’application...
-        </p>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <p>Avez-vous une idée qui pourrez faciliter votre quotidien ?</p>
-        <p class="textInput">Note pour expliquer votre idée...</p>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-item no-lines class="ion-no-padding" lines="none">
-          <ion-checkbox slot="start"></ion-checkbox>
-          <ion-label
-            >Je souhaite être appeler pour échanger sur mon avis __ __ __ __ __
-          </ion-label>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+        </p> -->
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div>
+            <ion-item lines="none">
+              <ion-label
+                >Avez-vous une idée qui pourrez faciliter votre quotidien
+                ?</ion-label
+              >
+            </ion-item>
 
-  <!--  -->
-  <div class="btnValid">
-    <ion-button class="btnValid__btn" color="primary"
-      >Je valide mon avis</ion-button
-    >
-  </div>
+            <ion-item lines="none">
+              <ion-textarea
+                class="survey__context--text"
+                placeholder="Nous cherchons à rendre le visuel du planning plus agréable"
+                ngModel
+                name="idea"
+                required
+                type="text"
+              ></ion-textarea>
+            </ion-item>
+          </div>
+          <!--  <p>Avez-vous une idée qui pourrez faciliter votre quotidien ?</p>
+        <p class="textInput">Note pour expliquer votre idée...</p> -->
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item no-lines lines="none">
+            <ion-checkbox slot="start"></ion-checkbox>
+            <ion-label
+              >Je souhaite être appeler pour échanger sur mon avis __ __ __ __
+              __
+            </ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
+    <!--  -->
+    <div class="btnValid">
+      <ion-button type="submit" class="btnValid__btn" color="secondary"
+        >Je valide mon avis</ion-button
+      >
+    </div>
+  </form>
   <!--  -->
 </ion-content>

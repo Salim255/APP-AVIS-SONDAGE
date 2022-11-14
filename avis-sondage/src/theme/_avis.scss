@@ -49,6 +49,12 @@
   border-radius: 0.4rem;
   padding: 0.5rem;
 }
+.galaxyFlod {
+  @media only screen and (width: 320px) {
+    display: none;
+    opacity: 0;
+  }
+}
 
 body {
   --ion-background-color: #eeeeee;
@@ -57,10 +63,52 @@ body {
   font-size: 0.9rem;
   //line-height: 2.3rem;
   color: rgba($color: #000000, $alpha: 0.6);
+  @media only screen and (min-width: 280px) {
+    max-height: 100%;
+    //font-size: 0.5rem;
+  }
+
+  @media only screen and (min-width: 320px) {
+    max-height: 100%;
+  }
+
+  @media only screen and (min-width: 390px) {
+    max-height: 89vh;
+  }
+  @media only screen and (min-width: 414px) {
+    max-height: 84vh;
+  }
+  @media only screen and (min-width: 412px) {
+    max-height: 83vh;
+  }
+  @media only screen and (min-width: 540px) {
+    max-height: 100vh;
+  }
+  @media only screen and (min-width: 768px) {
+    max-height: 73vh;
+  }
+  @media only screen and (min-width: 820px) {
+    max-height: 64%;
+  }
+  @media only screen and (min-width: 912px) {
+    max-height: 55vh;
+    max-width: 96%;
+  }
+  @media only screen and (min-width: 1024px) {
+    max-height: 100%;
+  }
+  @media only screen and (min-width: 1280px) {
+    max-height: 90%;
+    max-width: 67%;
+  }
 }
 
 .tabFlext {
   display: flex;
   flex-direction: row;
   //font-size: 0.2rem;
+  &__icon {
+    width: 1px;
+    height: 1px;
+  }
 }

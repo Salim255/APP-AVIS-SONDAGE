@@ -39,88 +39,99 @@
           </ion-item>
         </div> -->
 
-          <p>Aimez vous utiliser l'application WellEat ?</p>
+          <ion-item lines="none"
+            >Aimez vous utiliser l'application WellEat ?</ion-item
+          >
           <div class="likeContainer ion-text-center">
-            <ion-img
-              class="likeContainer__like like"
-              src="../../../assets/comme.svg"
-            ></ion-img>
-            <ion-img
-              class="likeContainer__unlike unlike"
-              src="../../../assets/ne-pas-aimer.svg"
-            ></ion-img>
+            <ion-button fill="clear" name="like">
+              <ion-img
+                class="likeContainer__like like"
+                src="../../../assets/comme.svg"
+              ></ion-img>
+            </ion-button>
+
+            <ion-button fill="clear" name="unlike">
+              <ion-img
+                class="likeContainer__unlike unlike"
+                src="../../../assets/ne-pas-aimer.svg"
+              ></ion-img
+            ></ion-button>
           </div>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <!-- <div>
-          <ion-item lines="none">
-            <ion-label
-              >Soyez franc et donnez nous la note que vous attribuez à
-              WellEat</ion-label
+          <div>
+            <ion-item lines="none">
+              <ion-label
+                >Soyez franc et donnez nous la note que vous attribuez à
+                WellEat</ion-label
+              >
+            </ion-item>
+            <div class="ion-text-center">
+              <ion-button
+                lines="none"
+                color="primary"
+                *ngFor="let r of ratingArr; index as i"
+                (click)="onClick(i)"
+                fill="clear"
+              >
+                <ion-icon name="star" class="icon" *ngIf="!returnStar(i)">
+                </ion-icon>
+                <ion-icon
+                  name="star"
+                  *ngIf="returnStar(i)"
+                  class="icon icon__star"
+                >
+                </ion-icon>
+              </ion-button>
+            </div>
+
+            <!--   <div
+              lines="none"
+              class="ion-text-center btnValid"
+              color="primary"
+              style="margin: 0 auto"
             >
-          </ion-item>
-
-          <ion-item lines="none" class="ion-text-center">
-            <ion-icon
-              slot="end"
-              fill="outline"
-              name="star"
-              class="icon"
-            ></ion-icon>
-            <ion-icon
-              slot="end"
-              fill="outline"
-              name="star"
-              class="icon"
-            ></ion-icon>
-            <ion-icon
-              slot="end"
-              fill="outline"
-              name="star"
-              class="icon"
-            ></ion-icon>
-            <ion-icon
-              slot="end"
-              fill="outline"
-              name="star"
-              class="icon"
-            ></ion-icon>
-          </ion-item>
-        </div> -->
-
-          <p>Soyez franc et donnez nous la note que vous attribuez à WellEat</p>
-          <div class="ion-text-center">
-            <!--  <ion-img src="../../../assets/star-o.svg" class="icon"></ion-img>
-          <ion-img src="../../../assets/star-o.svg" class="icon"></ion-img>
-          <ion-img src="../../../assets/star-o.svg" class="icon"></ion-img>
-          <ion-img src="../../../assets/star-o.svg" class="icon"></ion-img> -->
-            <ion-icon
-              slot="end"
-              fill="outline"
-              name="star"
-              class="icon"
-            ></ion-icon>
-            <ion-icon
-              slot="end"
-              fill="outline"
-              name="star"
-              class="icon"
-            ></ion-icon>
-            <ion-icon
-              slot="end"
-              fill="outline"
-              name="star"
-              class="icon"
-            ></ion-icon>
-            <ion-icon
-              slot="end"
-              fill="outline"
-              name="star"
-              class="icon"
-            ></ion-icon>
+              <ion-icon
+                fill="outline"
+                name="star"
+                class="icon icon__star"
+              ></ion-icon>
+              <ion-icon fill="outline" name="star" class="icon"></ion-icon>
+              <ion-icon fill="outline" name="star" class="icon"></ion-icon>
+              <ion-icon fill="outline" name="star" class="icon"></ion-icon>
+              <ion-icon fill="outline" name="star" class="icon"></ion-icon>
+            </div> -->
           </div>
+
+          <!--  <p>Soyez franc et donnez nous la note que vous attribuez à WellEat</p>
+          <div class="ion-text-center">
+            <ion-icon
+              slot="end"
+              fill="outline"
+              name="star"
+              class="icon"
+            ></ion-icon>
+            <ion-icon
+              slot="end"
+              fill="outline"
+              name="star"
+              class="icon"
+            ></ion-icon>
+            <ion-icon
+              slot="end"
+              fill="outline"
+              name="star"
+              class="icon"
+            ></ion-icon>
+            <ion-icon
+              slot="end"
+              fill="outline"
+              name="star"
+              class="icon"
+            ></ion-icon>
+          </div> -->
         </ion-col>
       </ion-row>
       <ion-row>
@@ -165,7 +176,7 @@
                 class="survey__context--text"
                 placeholder="Nous cherchons à rendre le visuel du planning plus agréable"
                 ngModel
-                name="obervation"
+                name="observation"
                 required
                 type="text"
               ></ion-textarea>
@@ -206,7 +217,7 @@
       <ion-row>
         <ion-col>
           <ion-item no-lines lines="none">
-            <ion-checkbox slot="start"></ion-checkbox>
+            <ion-checkbox slot="start" ngModel name="call"></ion-checkbox>
             <ion-label
               >Je souhaite être appeler pour échanger sur mon avis __ __ __ __
               __
@@ -223,5 +234,6 @@
       >
     </div>
   </form>
+
   <!--  -->
 </ion-content>

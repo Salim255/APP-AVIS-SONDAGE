@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-
+import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
+//imports: [NgbRatingModule ]
 const routes: Routes = [
   {
     path: '',
@@ -45,6 +46,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
+    NgbRatingModule,
   ],
   exports: [RouterModule],
 })
